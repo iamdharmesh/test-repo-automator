@@ -1,5 +1,8 @@
 name: 'TEST #79'
 on:
+  push:
+    branches:
+      - main
   issues:
     types:
       - opened
@@ -10,7 +13,7 @@ jobs:
   TEST:
     runs-on: ubuntu-latest
     steps:
-      - uses: 10up/action-pr-automator@enhancement/80
+      - uses: 10up/action-pr-automator@enhancement/52
         with:
           issue-comment: |
             Hi {author},
@@ -20,6 +23,9 @@ jobs:
           issue-welcome-message: |
             Welcome {author}! 👋 Thank you for opening your first issue! We're glad to have you here and appreciate your contribution. If you need any help or have questions, feel free to ask. Happy coding! 🚀
           pr-welcome-message: 🎉 Welcome {author}! 🎉 Thank you for your pull request! We're thrilled to see your involvement in our project. If you have any questions or need assistance, don't hesitate to ask. Keep up the great work! 👍
-
+          comment-ignore-users: |
+            ravinderk
+            iamdharmesh
+          sync-pr-branch: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
