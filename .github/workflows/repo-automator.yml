@@ -1,5 +1,8 @@
 name: 'TEST #79'
 on:
+  push:
+    branches:
+      - main
   issues:
     types:
       - opened
@@ -10,7 +13,7 @@ jobs:
   TEST:
     runs-on: ubuntu-latest
     steps:
-      - uses: 10up/action-pr-automator@enhancement/80
+      - uses: 10up/action-pr-automator@enhancement/52
         with:
           issue-comment: |
             Hi {author},
@@ -23,5 +26,6 @@ jobs:
           comment-ignore-users: |
             ravinderk
             iamdharmesh
+          sync-pr-branch: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
