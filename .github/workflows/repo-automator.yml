@@ -26,6 +26,6 @@ jobs:
           comment-ignore-users: |
             ravinderk
             iamdharmesh
-          sync-pr-branch: true
+          sync-pr-branch: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
