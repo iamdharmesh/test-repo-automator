@@ -10,8 +10,13 @@ jobs:
   TEST:
     runs-on: ubuntu-latest
     steps:
-      - uses: 10up/action-pr-automator@enhancement/79
+      - uses: 10up/action-pr-automator@enhancement/80
         with:
+          issue-comment: |
+            Hi {author},
+
+            Thank you for reporting this issue! We appreciate your feedback and will look into it promptly.
+          pr-comment: Hi {author}, Thank you for your Pull Request! We appreciate your contribution and will review it soon.
           issue-welcome-message: |
             Welcome {author}! 👋 Thank you for opening your first issue! We're glad to have you here and appreciate your contribution. If you need any help or have questions, feel free to ask. Happy coding! 🚀
           pr-welcome-message: 🎉 Welcome {author}! 🎉 Thank you for your pull request! We're thrilled to see your involvement in our project. If you have any questions or need assistance, don't hesitate to ask. Keep up the great work! 👍
